@@ -60,9 +60,11 @@ const CircleDisplay = ({ startDate, onChangeDate, title }) => {
         <div className="table-list">
           <table className="table bordered">
             <thead>
-              <th>Time</th>
-              <th>Start</th>
-              <th>Stop</th>
+              <tr>
+                <th>Time</th>
+                <th>Start</th>
+                <th>Stop</th>
+              </tr>
             </thead>
             <tbody>
               <tr>

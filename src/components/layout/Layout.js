@@ -7,6 +7,7 @@ import acc4 from '../../img/accordion-4.png';
 import { Card } from './Card';
 import { Tabs } from '../tabs/Tabs';
 import { List } from '../list/List';
+import { MapLayout } from '../map/MapLayout';
 
 const Layout = () => {
   return (
@@ -44,8 +45,7 @@ const Layout = () => {
             collapse="collapseFour"
             img={acc4}
           >
-            Some placeholder content for the second accordion panel. This panel
-            is hidden by default.
+            <MapLayout />
           </Card>
         </div>
       </div>

@@ -136,7 +136,8 @@ const LayoutBackground = styled.div`
           margin-top: 3rem;
 
           &:after {
-            content: '\\2212';
+            font-family: 'FontAwesome';
+            content: '\\f139';
             width: 35px;
             font-size: 25px;
             text-align: center;
@@ -145,11 +146,11 @@ const LayoutBackground = styled.div`
             right: 27%;
             position: absolute;
             font-weight: 500;
-            // background: #e8eeff;
           }
 
           &.collapsed:after {
-            content: '\\002B';
+            font-family: 'FontAwesome';
+            content: '\\f13a';
           }
         }
       }
@@ -443,12 +444,14 @@ const TabsLayout = styled.nav`
             .table {
               thead {
                 background: #a20c25;
-                th {
-                  color: #fff;
-                  border-bottom: none;
-                  border-right: 1px solid #fff;
-                  padding: 0.3rem;
-                  font-weight: 300;
+                tr {
+                  th {
+                    color: #fff;
+                    border-bottom: none;
+                    border-right: 1px solid #fff;
+                    padding: 0.3rem;
+                    font-weight: 300;
+                  }
                 }
               }
               tbody {
@@ -479,12 +482,12 @@ const TabsLayout = styled.nav`
 
 const ListLayout = styled.div`
   padding: 2rem !important;
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-
   .search-box {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
     width: 70%;
+    margin-bottom: 2rem;
     .input-group {
       input {
         height: 2rem;
@@ -516,6 +519,134 @@ const ListLayout = styled.div`
       }
     }
   }
+  .accordion-layout {
+    height: 30rem;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 0.3rem;
+      padding-left: 0.5rem;
+    }
+
+    &::-moz-scrollbar {
+      width: 0.3rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 0;
+      background-color: #f3f3f3;
+    }
+
+    &::-moz-scrollbar-track {
+      border-radius: 0;
+      background-color: #f3f3f3;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #a20c25;
+      border-radius: 0;
+    }
+
+    &::-moz-scrollbar-thumb {
+      background: #a20c25;
+      border-radius: 0;
+    }
+
+    .accordion {
+      width: 98%;
+    }
+
+    .card {
+      background-color: #f3f3f3;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: none;
+      margin-bottom: 0.5rem;
+      .card-header {
+        background-color: #f3f3f3;
+        border: none;
+        padding: 0;
+        height: 2.5rem;
+        color: #222;
+        &:not(:last-child) {
+          border-bottom: none;
+        }
+
+        .btn {
+          border-radius: 0;
+          border: none;
+          :focus,
+          :active {
+            outline: none !important;
+            box-shadow: none;
+          }
+        }
+
+        .btn-link {
+          width: 100%;
+          height: 5px;
+          text-align: center;
+          text-decoration: none;
+          margin-top: 0.2rem;
+          display: flex;
+          flex-wrap: nowrap;
+          color: #222;
+
+          &:after {
+            width: 35px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 5px;
+            top: 0.5rem;
+            right: 0;
+            position: absolute;
+            font-weight: 500;
+            font-family: 'FontAwesome';
+            content: '\\f13a';
+          }
+
+          &.collapsed:after {
+            font-family: 'FontAwesome';
+            content: '\\f139';
+          }
+
+          img {
+            width: 20px;
+            margin-right: 0.7rem;
+          }
+
+          .title {
+            color: #47464c;
+            font-weight: 700;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            text-transform: uppercase;
+            margin-right: 4rem;
+          }
+
+          .desc {
+            color: #47464c;
+            font-weight: 700;
+            margin-top: 0.25rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .card-body {
+        padding: 1rem;
+      }
+    }
+  }
 `;
 
-export { PlannerBackground, LayoutBackground, TabsLayout, ListLayout };
+const MapLayoutBackground = styled.div``;
+
+export {
+  PlannerBackground,
+  LayoutBackground,
+  TabsLayout,
+  ListLayout,
+  MapLayoutBackground,
+};

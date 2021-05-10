@@ -5,8 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import ConfigureStore from './store/store';
 import 'jquery';
 import 'popper.js';
+import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'leaflet/dist/leaflet.css';
 import './index.css';
 
 const initialState = window.INITIAL_REDUX_STATE;

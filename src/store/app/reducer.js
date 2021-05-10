@@ -1,15 +1,15 @@
 import { AppTypes } from './types';
 
 const initialState = {
-  togglePlanner: false,
+  inputAddress: {},
 };
 
 export default function appReducer(state = initialState, action) {
   switch (action.type) {
-    case AppTypes.TOGGLE_PLANNER:
+    case AppTypes.SAVE_ADDRESS_INPUT:
       return {
         ...state,
-        togglePlanner: action.payload,
+        inputAddress: action.payload,
       };
     default:
       return state;

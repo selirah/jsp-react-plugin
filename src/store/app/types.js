@@ -1,3 +1,3 @@
 export const AppTypes = {
-  TOGGLE_PLANNER: '@app/TOGGLE_PLANNER'
-}
+  SAVE_ADDRESS_INPUT: '@app/SAVE_ADDRESS_INPUT',
+};

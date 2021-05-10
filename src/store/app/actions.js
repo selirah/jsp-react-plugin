@@ -1,8 +1,10 @@
-import { AppTypes } from './types'
+import { AppTypes } from './types';
 
 const appActions = {
-  togglePlanner: (payload) => ({
-    type: AppTypes.TOGGLE_PLANNER,
-    payload
-  });
-}
+  saveAddressInput: (payload) => ({
+    type: AppTypes.SAVE_ADDRESS_INPUT,
+    payload,
+  }),
+};
+
+export default appActions;
